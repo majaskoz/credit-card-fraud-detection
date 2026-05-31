@@ -30,5 +30,5 @@ Głównym wyzwaniem projektu było zbalansowanie precyzji z czułością.
 ## Szybki start
 
 ```bash
-git clone [https://github.com/TWÓJ_NICK/NAZWA_REPOZYTORIUM.git](https://github.com/TWÓJ_NICK/NAZWA_REPOZYTORIUM.git)
+git clone [https://github.com/majaskoz/credit-card-fraud-detection.git](https://github.com/majaskoz/credit-card-fraud-detection.git)
 pip install scikit-learn imbalanced-learn pandas numpy
