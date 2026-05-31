@@ -2,18 +2,21 @@
 
 Projekt realizuje proces klasyfikacji transakcji oszukańczych na silnie niezbalansowanym zbiorze danych (0.17% transakcji to fraudy), wykorzystując redukcję wymiarowości (PCA) oraz techniki resamplingu.
 
-## Wyniki i Porównanie Modeli
-Głównym wyzwaniem projektu było zbalansowanie precyzji z czułością.
+## Results and Model Comparison
 
-* **Model 1: Regresja Logistyczna (Cost-Sensitive)**
-    * Recall: `0.89` | Precision: `0.06` | F1-Score: `0.12`
-    * *Werdykt:* Nieużyteczny biznesowo – generuje aż 1982 fałszywe alarmy.
-* **Model 2: Las Losowy (SMOTE + RUS)**
-    * Recall: `0.80` | Precision: `0.64` | F1-Score: `0.71`
-    * *Werdykt:* Najlepsza czułość (omija tylko 29 oszustw), kosztem 67 fałszywych alarmów.
-* **Model 3: Strojony Las Losowy (RandomizedSearchCV)**
-    * Recall: `0.73` | Precision: `0.96` | F1-Score: `0.83`
-    * *Werdykt:* Najbardziej zrównoważony i bezpieczny model operacyjny (tylko 5 fałszywych alarmów).
+The main challenge of the project was to balance precision and recall.
+
+* **Model 1: Logistic Regression (Cost-Sensitive)**
+  * Recall: `0.89` | Precision: `0.06` | F1-Score: `0.12`
+  * *Verdict:* Commercially unviable – generates as many as 1982 false positives.
+  
+* **Model 2: Random Forest (SMOTE + RUS)**
+  * Recall: `0.80` | Precision: `0.64` | F1-Score: `0.71`
+  * *Verdict:* Best recall (misses only 29 frauds), at the cost of 67 false positives.
+  
+* **Model 3: Tuned Random Forest (RandomizedSearchCV)**
+  * Recall: `0.73` | Precision: `0.96` | F1-Score: `0.83`
+  * *Verdict:* The most balanced and secure operational model (only 5 false positives).
 
 ---
 
